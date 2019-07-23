@@ -1,12 +1,20 @@
 {
   "extends": ["tslint-config-standard", "rxjs-tslint-rules"],
   "rules": {
-    "trailing-comma": false,
     "return-undefined": false,
     "strict-type-predicates": false,
     "no-floating-promises": false,
     "no-unnecessary-type-assertion": false,
     "no-var-keyword": false,
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never",
+        "multiline": "always",
+        "esSpecCompliant": true
+      }
+    ],
+    "semicolon": [true, "always"],
 
     "rxjs-ban-observables": { "severity": "error" },
     "rxjs-ban-operators": { "severity": "error" },
